@@ -9,28 +9,28 @@
 </head>
 
 <body class="bg-blue-600 flex  justify-center items-center h-screen">
-    <div x-data="{radio: 1}" class="flex flex-col gap-y-4 max-w-md w-full">
-        <div @click=" radio = 1" :class="radio===1 ? ' ring-4 ring-blue-300  bg-blue-400 text-white' : ''  " class="bg-white p-4  mt-4 rounded-xl  flex items-center justify-between ">
+    <div x-data="{radio: 1 , activeClass:'ring-4 ring-blue-300  bg-blue-500 text-white'}" class="flex flex-col gap-y-4 max-w-md w-full">
+        <div @click=" radio = 1" :class="radio===1 ? activeClass  : ''  " class="bg-white p-4  mt-4 rounded-xl  flex items-center justify-between ">
             <div>
-                <span class="text-lg mb-2">Startup</span>
+                <span class="text-lg mb-2 font-bold">Startup</span>
                 <p class="text-xm ">12GB/6 CPUs · 160 GB SSD disk</p>
             </div>
             <div x-show="radio ===1" class="rounded-full bg-blue-500 flex item-center justify-center text-white"> <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 " viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
           </svg></div>
         </div>
-        <div @click="radio = 2" :class="radio===2 ? ' ring-4 ring-blue-300   bg-blue-400 text-white' : ''  " class="bg-white p-4  mt-4 rounded-xl flex items-center justify-between    ">
+        <div @click="radio = 2" :class="radio===2 ? activeClass : ''  " class="bg-white p-4  mt-4 rounded-xl flex items-center justify-between    ">
             <div>
-                <span class=" mb-2 text-lg">Business</span>
+                <span class=" mb-2 text-lgfont-bold ">Business</span>
                 <p class="text-xm ">16GB/8 CPUs · 512 GB SSD disk</p>
             </div>
             <div x-show="radio ===2" class="rounded-full bg-blue-500 flex item-center justify-center text-white"> <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 " viewBox="0 0 20 20" fill="currentColor">
         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
       </svg></div>
         </div>
-        <div @click="radio = 3" :class="radio===3 ? ' ring-4 ring-blue-300   bg-blue-400 text-white' : ''  " class="bg-white p-4   mt-4 rounded-xl flex items-center justify-between   ">
+        <div @click="radio = 3" :class="radio===3 ? activeClass : ''  " class="bg-white p-4   mt-4 rounded-xl flex items-center justify-between   ">
             <div>
-                <span class=" mb-2 text-lg">Enterprise</span>
+                <span class=" mb-2 text-lgfont-bold ">Enterprise</span>
                 <p class="text-xm ">32GB/12 CPUs · 1024 GB SSD disk</p>
             </div>
             <div x-show="radio ===3" class="rounded-full bg-blue-500 flex item-center justify-center text-white"> <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 " viewBox="0 0 20 20" fill="currentColor">
